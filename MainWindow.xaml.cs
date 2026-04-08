@@ -19,13 +19,21 @@ namespace kolebania
         public MainWindow()
         {
             InitializeComponent();
+            InintializeWeb();
+        }
+
+        async void InintializeWeb()
+        {
+            await WebView.EnsureCoreWebView2Async(null);
+            await WebView.ExecuteScriptAsync("document.body.style.backgroundColor = 'black';");
+            await WebView.ExecuteScriptAsync("document.body.style.color = 'white';");
+            DateTime time = DateTime.Now;
+            await WebView.ExecuteScriptAsync($"document.body.innerHTML = '[{time.Hour}:{time.Minute}:{time.Second}] — Console Loaded —<br>';");
         }
 
         public void InitPython()
         {
             // python init.
         }
-
-
     }
 }

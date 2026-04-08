@@ -8,4 +8,37 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\data\config.json" />
+    <None Remove="Resources\data\graphics.exe" />
+    <None Remove="Resources\fonts\Kanit Cyrillic.otf" />
+    <None Remove="Resources\fonts\Kanit Cyrillic.ttf" />
+    <None Remove="Resources\fonts\Kanit-Black.ttf" />
+    <None Remove="Resources\fonts\Kanit-Bold.ttf" />
+    <None Remove="Resources\fonts\Kanit-ExtraBold.ttf" />
+    <None Remove="Resources\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\data\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\data\graphics.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\fonts\Kanit Cyrillic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\fonts\Kanit Cyrillic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3856.49" />
+  </ItemGroup>
+
 </Project>
