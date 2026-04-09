@@ -6,9 +6,27 @@
       xmlns:local="clr-namespace:kolebania.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="main_page">
+      Title="main_page"
+      >
+
+
 
     <Grid>
-        
+        <Label Content="Выберите нужный пункт 🦊" Foreground="White" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="84,0,0,0" Opacity="1" FontFamily="Segoe UI Emoji">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                                <EventTrigger RoutedEvent="Label.Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Style.Triggers>
+                        </Style>
+            </Label.Style>
+        </Label>
+
     </Grid>
 </Page>

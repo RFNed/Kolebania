@@ -1,0 +1,24 @@
+﻿<Page x:Class="kolebania.pages.settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kolebania.pages"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="settings" Background="#FF170635" Height="209">
+
+    <Grid>
+        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" Height="34" Width="147" Style="{StaticResource BeatifulButton}"/>
+        <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,29,0,0" TextWrapping="Wrap" Text="" Name="duration" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,56,0,0" TextWrapping="Wrap" Text="" x:Name="sample_rate" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,83,0,0" TextWrapping="Wrap" Text="" x:Name="frequency" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,110,0,0" TextWrapping="Wrap" Text="" x:Name="amplitude" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <Label Content="t" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="SR" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="f" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="A" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,108,0,0" VerticalAlignment="Top"/>
+        <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,138,0,0" TextWrapping="Wrap" Text="" x:Name="phase" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <Label Content="ф" FontWeight="Thin" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="45,136,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

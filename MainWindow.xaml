@@ -23,8 +23,8 @@
         <Image Margin="31,27,27,26" Grid.Row="0"  Source="/Resources/logo.png" Stretch="Fill"/>
         <Button Content="Настройки" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" RenderTransformOrigin="0.442,0.521" Width="213" Height="43"/>
         <Button Content="Справка" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" RenderTransformOrigin="0.442,0.521" Width="213" Height="43" />
-        <Label FontSize="37" Grid.Column="1" Content="Главное меню" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="/Resources/fonts/#Kanit Cyrillic" Height="49" Width="684"/>
+        <Label  FontSize="37" Grid.Column="1" Content="Главное меню" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="/Resources/fonts/#Kanit Cyrillic" Height="49" Width="Auto" Margin="39,0,0,0"/>
         <Wpf:WebView2 Name="WebView" Grid.Column="1" Margin="0,1,0,0" Grid.Row="5"/>
-        <Frame Source="pages/main_page.xaml" Grid.Column="1" Content="..." Margin="0,152,0,5" Grid.RowSpan="5"/>
+        <Frame Source="pages/settings.xaml" Grid.Column="1" Margin="0,152,0,5" Grid.RowSpan="5"/>
     </Grid>
 </Window>
