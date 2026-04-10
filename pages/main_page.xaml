@@ -16,15 +16,15 @@
             <Label.Style>
                 <Style TargetType="Label">
                     <Style.Triggers>
-                                <EventTrigger RoutedEvent="Label.Loaded">
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </Style.Triggers>
-                        </Style>
+                        <EventTrigger RoutedEvent="Label.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
             </Label.Style>
         </Label>
 
