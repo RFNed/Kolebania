@@ -15,7 +15,7 @@ using System.Text.Json;
 using System.IO;
 using System.Globalization;
 using System.Diagnostics;
-
+using kolebania;
 namespace kolebania.pages
 {
     /// <summary>
@@ -41,7 +41,7 @@ namespace kolebania.pages
             e.Handled = regex.IsMatch(e.Text);
         }
 
-
+        
 
         private void phase_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -53,34 +53,45 @@ namespace kolebania.pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            
-=======
             if (duration.Text != "" && sample_rate.Text != "" && frequency.Text != "" && amplitude.Text != "" && phase.Text != "")
             {
-                float durationValue = float.Parse(duration.Text, CultureInfo.InvariantCulture);
-                float sampleRateValue = float.Parse(sample_rate.Text, CultureInfo.InvariantCulture);
-                float frequencyValue = float.Parse(frequency.Text, CultureInfo.InvariantCulture);
-                float amplitudeValue = float.Parse(amplitude.Text, CultureInfo.InvariantCulture);
-                float phaseValue = float.Parse(phase.Text, CultureInfo.InvariantCulture);
-                SettingsData data = new SettingsData
+                var mainWin = Application.Current.MainWindow as MainWindow;
+                if (mainWin != null)
                 {
-                    duration = durationValue,
-                    sample_rate = sampleRateValue,
-                    frequency = frequencyValue,
-                    amplitude = amplitudeValue,
-                    phase = phaseValue
-                };
-                string jsonString = JsonSerializer.Serialize(data);
-                try
-                {
-                    File.WriteAllText("Resources/data/config.json", jsonString);
+                    DateTime time = DateTime.Now;
+                    float durationValue = float.Parse(duration.Text, CultureInfo.InvariantCulture);
+                    mainWin.InsertConsoleLogs($"* Duration: {durationValue}");
+                    float sampleRateValue = float.Parse(sample_rate.Text, CultureInfo.InvariantCulture);
+                    mainWin.InsertConsoleLogs($"* Sample Rate: {sampleRateValue}");
+                    float frequencyValue = float.Parse(frequency.Text, CultureInfo.InvariantCulture);
+                    mainWin.InsertConsoleLogs($"* Frequency: {frequencyValue}");
+                    float amplitudeValue = float.Parse(amplitude.Text, CultureInfo.InvariantCulture);
+                    mainWin.InsertConsoleLogs($"* Amplitude: {amplitudeValue}");
+                    float phaseValue = float.Parse(phase.Text, CultureInfo.InvariantCulture);
+                    mainWin.InsertConsoleLogs($"* Phase: {phaseValue}");
+                    SettingsData data = new SettingsData
+                    {
+                        duration = durationValue,
+                        sample_rate = sampleRateValue,
+                        frequency = frequencyValue,
+                        amplitude = amplitudeValue,
+                        phase = phaseValue
+                    };
+                    string jsonString = JsonSerializer.Serialize(data);
+                    try
+                    {
+                        mainWin.InsertConsoleLogs($"Saving File...");
+                        File.WriteAllText("Resources/data/config.json", jsonString);
+                        mainWin.InsertConsoleLogs($"Launching Graphics...");
+                        Process.Start("Resources/data/graphics.exe");
+                        DateTime time_over = DateTime.Now;
+                        mainWin.InsertConsoleLogs($"<b>Done!!!</b> <u>{(time_over - time).TotalSeconds}</u> s");
 
-                    Process.Start("Resources/data/graphics.exe");
-                }
-                catch
-                {
-                    MessageBox.Show("Отсутствует исполняемый файл или директория", "Ошибка", button: MessageBoxButton.OK, icon: MessageBoxImage.Error);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Отсутствует исполняемый файл или директория", "Ошибка", button: MessageBoxButton.OK, icon: MessageBoxImage.Error);
+                    }
                 }
 
             }
@@ -88,7 +99,6 @@ namespace kolebania.pages
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", button: MessageBoxButton.OK, icon: MessageBoxImage.Warning);
             }
->>>>>>> 73ea2d15e81d84e1d6297d3f38e7733812651ead
         }
     }
 }
