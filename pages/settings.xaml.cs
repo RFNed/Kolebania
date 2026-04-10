@@ -30,12 +30,19 @@ namespace kolebania.pages
             e.Handled = regex.IsMatch(e.Text);
         }
 
+
+
         private void phase_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
             {
                 e.Handled = true;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

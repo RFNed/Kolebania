@@ -35,5 +35,10 @@ namespace kolebania
         {
             // python init.
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Page.Source = new Uri("pages/settings.xaml", UriKind.Relative);
+        }
     }
 }

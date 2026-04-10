@@ -8,7 +8,7 @@
       Title="settings" Background="#FF170635" Height="209">
 
     <Grid>
-        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" Height="34" Width="147" Style="{StaticResource BeatifulButton}"/>
+        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" Height="34" Width="147" Style="{StaticResource BeatifulButton}" Click="Button_Click"/>
         <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,29,0,0" TextWrapping="Wrap" Text="" Name="duration" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
         <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,56,0,0" TextWrapping="Wrap" Text="" x:Name="sample_rate" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
         <TextBox MaxLength="4" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,83,0,0" TextWrapping="Wrap" Text="" x:Name="frequency" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
