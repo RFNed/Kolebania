@@ -20,12 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\data\config.json">
+    <Content Include="Resources\data\config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\data\graphics.exe">
+    </Content>
+    <Content Include="Resources\data\graphics.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Content Include="Resources\fonts\Kanit Cyrillic.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
