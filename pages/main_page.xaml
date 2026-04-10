@@ -9,6 +9,16 @@
       Title="main_page">
 
     <Grid>
-        
+        <Label Content="Нажмите на нужную настройку" FontSize="35" Foreground="White" HorizontalAlignment="Left" Height="118" Margin="106,175,0,0" VerticalAlignment="Top" Width="603" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.209"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
     </Grid>
 </Page>
