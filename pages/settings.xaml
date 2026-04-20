@@ -8,7 +8,7 @@
       Title="settings" Background="#FF170635" Height="209">
 
     <Grid>
-        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" Height="34" Width="147" Style="{StaticResource BeatifulButton}" Click="Button_Click"/>
+        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="295,134,0,0" VerticalAlignment="Top" Height="34" Width="175" Style="{StaticResource BeatifulButton}" Click="Button_Click"/>
 
         <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,29,0,0" TextWrapping="Wrap" Text="" Name="duration" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
         <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,56,0,0" TextWrapping="Wrap" Text="" x:Name="sample_rate" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
@@ -17,11 +17,17 @@
 
         <Label Content="t" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,27,0,0" VerticalAlignment="Top"/>
         <Label Content="SR" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="f" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="T" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top"/>
         <Label Content="A" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,108,0,0" VerticalAlignment="Top"/>
         <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,138,0,0" TextWrapping="Wrap" Text="" x:Name="phase" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
         <Label Content="ф" FontWeight="Thin" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="45,136,0,0" VerticalAlignment="Top"/>
         <Label Content="lim" FontSize="7px" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="49,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,26,0,0" VerticalAlignment="Top"/>
+        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="рад" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,136,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Page>
