@@ -4,29 +4,39 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:kolebania.pages"
-      mc:Ignorable="d" d:DesignWidth="800"
-      Title="settings" Background="#FF170635" Height="209">
+      mc:Ignorable="d"
+      Title="settings" Background="#FF170635" Height="308" Width="1088">
 
     <Grid>
-        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="295,134,0,0" VerticalAlignment="Top" Height="34" Width="175" Style="{StaticResource BeatifulButton}" Click="Button_Click"/>
+        <Button Cursor="Hand" SnapsToDevicePixels="True" Foreground="White" Background="#252526" Content="Обработать" HorizontalAlignment="Left" Margin="412,228,0,0" VerticalAlignment="Top" Height="52" Width="241" Style="{StaticResource BeatifulButton}" Click="Button_Click" FontSize="24"/>
 
-        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,29,0,0" TextWrapping="Wrap" Text="" Name="duration" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
-        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,56,0,0" TextWrapping="Wrap" Text="" x:Name="sample_rate" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
-        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,83,0,0" TextWrapping="Wrap" Text="" x:Name="frequency" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
-        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,110,0,0" TextWrapping="Wrap" Text="" x:Name="amplitude" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
+        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="72,31,0,0" TextWrapping="Wrap" Text="" FontSize="23px" Name="duration" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.494,0.565" Height="38"/>
+        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="72,78,0,0" TextWrapping="Wrap" FontSize="23px" Text="44100" x:Name="sample_rate"  VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.494,0.565" Height="38"/>
+        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="72,125,0,0" TextWrapping="Wrap" FontSize="23px" Text="" x:Name="frequency" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.494,0.565" Height="38" TextChanged="frequency_TextChanged"/>
+        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="72,171,0,0" TextWrapping="Wrap" FontSize="23px" Text="" x:Name="amplitude" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.494,0.565" Height="38"/>
 
-        <Label Content="t" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,27,0,0" VerticalAlignment="Top"/>
-        <Label Content="SR" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="T" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top"/>
-        <Label Content="A" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="45,108,0,0" VerticalAlignment="Top"/>
-        <TextBox MaxLength="10" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="70,138,0,0" TextWrapping="Wrap" Text="" x:Name="phase" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.494,0.565" Height="22"/>
-        <Label Content="ф" FontWeight="Thin" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="45,136,0,0" VerticalAlignment="Top"/>
-        <Label Content="lim" FontSize="7px" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="49,34,0,0" VerticalAlignment="Top"/>
-        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,26,0,0" VerticalAlignment="Top"/>
-        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,81,0,0" VerticalAlignment="Top"/>
-        <Label Content="рад" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="184,136,0,0" VerticalAlignment="Top"/>
+        <Label Content="t" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="30,28,0,0" VerticalAlignment="Top" Height="45" Width="23" FontSize="24"/>
+        <Label Content="SR*" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="23,74,0,0" VerticalAlignment="Top" Height="45" Width="45" FontSize="24">
+            <Label.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold">Частота дискретизации (или же частота семплирования)</TextBlock>
+                        <TextBlock>это величина, которая определяет, сколько раз в секунду измеряется уровень (амплитуда) непрерывного аналогового сигнала для его преобразования в цифровой вид.
+<LineBreak/>Простыми словами: это «частота снимков» звука.<LineBreak/><LineBreak/>Стандартно используют значение 44100.</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
+        <Label Content="T" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="30,121,0,0" VerticalAlignment="Top" Height="45" Width="27" FontSize="24"/>
+        <Label Content="A" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="30,168,0,0" VerticalAlignment="Top" Height="45" Width="28" FontSize="24"/>
+        <TextBox MaxLength="10" FontSize="23px" PreviewKeyDown="phase_PreviewKeyDown" PreviewTextInput="duration_PreviewTextInput" HorizontalAlignment="Left" Margin="72,220,0,0" TextWrapping="Wrap" Text="" x:Name="phase" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.494,0.565" Height="38"/>
+        <Label Content="ф" FontWeight="Thin" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="30,216,0,0" VerticalAlignment="Top" Height="45" Width="32" FontSize="24"/>
+        <Label Content="lim" FontSize="14" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="37,40,0,0" VerticalAlignment="Top" Height="33" Width="31"/>
+        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="261,26,0,0" VerticalAlignment="Top" Height="45" Width="25" FontSize="24"/>
+        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="261,74,0,0" VerticalAlignment="Top" Height="45" Width="37" FontSize="24"/>
+        <Label Content="Гц" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="261,74,0,0" VerticalAlignment="Top" Height="45" Width="37" FontSize="24"/>
+        <Label Content="с" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="261,121,0,0" VerticalAlignment="Top" Height="45" Width="25" FontSize="24"/>
+        <Label Content="рад" FontStyle="Italic" FontWeight="Thin" Foreground="White" HorizontalAlignment="Left" Margin="261,216,0,0" VerticalAlignment="Top" Height="45" Width="48" FontSize="24"/>
 
 
     </Grid>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:kolebania"
         xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="kolebania.MainWindow"
         mc:Ignorable="d"
-        Title="Колебания" Height="576" Width="1016" ResizeMode="NoResize" Background="#FF180423">
+        Title="Колебания" Height="801" Width="1678" ResizeMode="NoResize" Background="#FF180423">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="149*"/>

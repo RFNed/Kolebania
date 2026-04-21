@@ -100,5 +100,10 @@ namespace kolebania.pages
                 MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", button: MessageBoxButton.OK, icon: MessageBoxImage.Warning);
             }
         }
+
+        private void frequency_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
